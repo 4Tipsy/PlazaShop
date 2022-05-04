@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+
+<!--
+--------------------------
+--------------- header -->
+@@include("htmlParts/header.html")
+
+
+
+
+<!--
+--------------------------
+-------------- content -->
+<div class="container-fluid" style="width: 96%">
+    <!- idk why but if it's 100% site become bigger than screen /// deco fix also ->
+    <div class="row content">
+        <div class="offset-xl-1 col-11">
+            <h1>Your cart (<span class="__how-many-in-cart">0</span> item)</h1>
+        </div>
+        <div class="cart__items-list offset-xl-1 col-8 col-xl-7" id="cart__items-list">
+
+
+
+
+
+            <!-- -------------- -->
+
+        </div>
+        <div class=" col-4 col-xl-3">
+            <div class="buy-btn-section">
+            <div>
+                <div class="__total-amount">Total amount: <span class="NSR_ __how-many-in-cart">10</span></div>
+                <div class="__total-price NSR_"><div>Total price:&nbsp;</div><span>120 000</span></div>
+            </div>
+            <button class="cart__buy-btn">Заказать</button>
+
+
+            </div>
+            <div class="under-buy-btn-section">
+                <button>Watch history of orders</button>
+                <button>Watch status of orders</button>
+                <div class="cart__error-report">
+                    ERROR-1e: cannot connect to the payment system
+                    (option is not assigned)
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--
+--------------------------
+------ footer and so on-->
+@@include("htmlParts/footer_and_add-stuff.html")
+
+<script src="js/render_cart.js"></script>
+
+@@include("htmlParts/links.html")
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+/* it's a stylesheet common 4 every page of PLAZA.shop */
+
+$main-color: #DF16BF; //don't forget to change this in other files!!!
+$not-that-black: #202020;
+$blue-one: #5D5FEF;
+
+
+/* some fonts */
+@font-face {
+    font-family: 'Noto Sans Light';
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+    url('../res/font/NotoSans-Light.woff') format('woff'),
+    url('../res/font/NotoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans'), local('NotoSans'),
+    url('../res/font/NotoSans.woff') format('woff'),
+    url('../res/font/NotoSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// nullify input styles a bit
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+/* --- */
+.line-a {
+    // big line dividing the sections
+    border: 1px solid black;
+
+}
+body {
+    background-image: url("../res/bg_.svg");
+    background-position: top center;
+
+
+    font-family: "Noto Sans Light", Arial, sans-serif;
+
+    //nullifying A's and BTN's
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+
+
+/* sup class which means Noto-Sans-Regular font usage */
+.NSR_ {
+    font-family: "Noto Sans", serif;
+}
+
+
+// making btn's coloring on hover
+.header__acc-btn {
+    background-image: url("../res/ico/account.svg");
+    &:hover {
+        background-image: url("../res/ico/acc_pink.svg");
+    }
+}
+.header__compare-btn {
+    background-image: url("../res/ico/compare.svg");
+    &:hover {
+        background-image: url("../res/ico/compare_pink.svg");
+    }
+}
+.header__cart-btn {
+    background-image: url("../res/ico/cart.svg");
+    &:hover {
+        background-image: url("../res/ico/cart_pink.svg");
+    }
+}
+.add-to-cart {
+    background-image: url("../res/ico/cart.svg");
+    &:hover {
+        background-image: url("../res/ico/cart_pink.svg");
+    }
+}
+.add-to-compare {
+    background-image: url("../res/ico/compare.svg");
+    &:hover {
+        background-image: url("../res/ico/compare_pink.svg");
+    }
+}
+
+
+
+// header -----------------------------------------------
+.header-itself {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+.logo, .lang-btn, .search-box, .user-btns-container {
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+.logo_and_lang-btn {
+    display: flex;
+    align-items: baseline;
+}
+.logo {
+    cursor: pointer;
+    font-size: max(18px, 2.1vw);
+    span {
+        font-size: max(24px, 2.4vw);
+
+        color: $main-color;
+    }
+}
+.lang-btn {
+    color: black;
+    text-decoration: none;
+    font-size: max(16px, 2vw);
+&:hover {
+     color: $main-color;
+ }
+}
+
+
+.search-box {
+    position: relative;
+    width: 45%;
+    min-width: 20vw;
+    height: min(6vw, 50%);
+
+    z-index: 11;
+
+    button {
+        position: absolute;
+        z-index: inherit;
+
+        right: 0.8vw;
+        top: 20%;
+
+        aspect-ratio: 1 / 1;
+        height: 60%;
+
+        cursor: pointer;
+        background-image: url("../res/ico/found-btn.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.search {
+    font-size: min(2.0vw, 16px);
+
+    width: 100%;
+    height: 100%;
+    border: solid 1px;
+    border-radius: 10px;
+    background-color: transparent;
+
+    padding-left: 0.8vw;
+    padding-right: 2vw;
+    outline: none;
+
+    position: relative;
+    z-index: inherit;
+    &:focus { // aka search_active
+        border: solid 3px $main-color;
+        background-color: #fff;
+
+    }
+}
+
+
+
+.search-tips-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 0;
+    position: absolute;
+    top: 140%;
+    width: 100%;
+
+    background-color: #fff;
+    border: solid 1px;
+    border-radius: 10px;
+
+    z-index: inherit;
+
+    .__tip {
+        font-size: min(2.0vw, 16px);
+
+        padding-top: 0.35vw;
+        padding-bottom: 0.35vw;
+        padding-left: 0.8vw;
+        width: calc(100% - 0.8vw);
+
+        cursor: pointer;
+        &:hover {
+            background-color: lightgray;
+        }
+    }
+}
+
+
+
+
+
+
+.user-btns-container {
+    display: flex;
+    button {
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        margin-right: 1.5vw;
+
+        position: relative;
+
+        width: min(5.2vw, 40px);
+        aspect-ratio: 1 / 1;
+    }
+}
+.goToCompare_indicator, .goToCart_indicator {
+    position: absolute;
+    left: -7%;
+    bottom: -5%;
+
+    opacity: 0.95;
+
+    font-size: calc(min(3vw, 25px) / 1.1);
+    height: min(3vw, 25px);
+
+    text-align: center;
+    vertical-align: middle;
+
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    color: #ffffff;
+    background-color: $main-color;
+}
+
+
+.under-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    height: 40px;
+}
+
+
+.catalog-wrapper {
+    position: relative;
+}
+
+// catalog
+.catalog-btn {
+    position: sticky;
+
+    aspect-ratio: 36 / 25;
+    width: min(3vw, 37px);
+
+    background-image: url("../res/ico/catalog.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    z-index: 5;
+
+    transition: all ease 1s;
+    &_active {
+        transform: rotate(180deg);
+    }
+}
+
+.catalog-link {
+    font-family: "Noto Sans Light", serif; // idk why but it should be so
+    font-size: min(3vw, 25px);
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
+// catalog additional links
+@media (max-width: 580px) {
+    .catalog-inner {
+        top: calc(min(3vw, 30px) * -0.1)!important;
+    }
+}
+.catalog-inner {
+    position: absolute;
+
+    top: calc(min(3vw, 30px) * -0.34);
+    left: calc(min(3vw, 30px) * -0.62);
+
+    width: calc(min(3vw, 37px) * 2.0);
+
+    display: grid;
+
+
+    background-color: #fff;
+    border: 1.5px solid black;
+    border-radius: 20px;
+
+    z-index: 3;
+
+    transition: all ease 1s;
+
+    * {
+        opacity: 0
+    }
+}
+.catalog-inner__top-block {
+    padding-top: 0.5%; // deco fix
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    font-size: min(3vw, 25px);
+
+    height: calc(min(3vw, 30px) * 1.5);
+}
+.catalog-inner__links-box {
+    transition: all ease 1s;
+    height: 0;
+    * {
+        margin: 0.2vw;
+    }
+}
+.catalog-linkBtn {
+
+    .__after {
+        width: calc(min(3vw, 25px) / 1.75);
+        aspect-ratio: 4 / 3;
+    }
+}
+.catalog-linkBtn-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+// footer
+.line-ft {
+    height: 1px;
+    width: 65%;
+    background-color: white;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+
+
+
+    background-color: $not-that-black;
+
+    display: grid;
+    grid-template-areas: "footer-a footer-b footer-b1 footer-c"
+                        "copyright copyright copyright copyright";
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(16vw, 10fr) 1fr;
+    .f_a { grid-area: footer-a }
+    .f_b { grid-area: footer-b }
+    .f_b1 { grid-area: footer-b1 }
+    .f_c { grid-area: footer-c }
+
+
+    div {
+        margin-left: 2%;
+        margin-right: 2%;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        color: #fff !important; // white logo on black background =)
+    }
+
+    $size-of-font: max(1.3vw, 12px); // footer's font size
+
+    p {
+
+        font-size: $size-of-font;
+
+        color: white;
+
+
+        // fixing some bugs
+        margin-bottom: 0;
+
+        margin-top: 1.7%;
+    }
+    span {
+        font-size: $size-of-font;
+
+        color: white;
+        margin-bottom: 1%;
+
+    }
+    .ft_link {
+        text-align: center;
+        font-size: $size-of-font;
+        margin-top: 4%;
+
+        color: white;
+
+        &:hover {
+            color: $main-color;
+
+        }
+    }
+}
+
+.our-media {
+    width: 55%;
+
+    margin-top: 1.8%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    img {
+        width: 85%;
+        height: auto;
+    }
+}
+
+
+.copyright {
+    grid-area: copyright;
+
+    padding: 0;
+
+    text-align: center;
+    font-size: min(1vw, 15px);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.goToItem {
+    cursor: pointer;
+}
+
+
+/* ----------------------------------------
+ all this staff r btn's and div's which r absolute from body
+*/
+
+.side-btns-container {
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-btn, .go-to-top {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: min(6.5vw, 65px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+
+    opacity: 75%;
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+
+    &:hover {
+        opacity: 90%;
+    }
+}
+.chat-btn {
+    background-color: $main-color;
+    background-image: url("../res/ico/chat.svg");
+
+    margin-bottom: max(1.2vw, 10px);
+    &:hover {
+        transform: scale(1.4);
+    }
+}
+.go-to-top {
+
+    background-color: $not-that-black;
+    background-image: url("../res/ico/Arrow-1.svg");
+
+    transform: rotate(90deg);
+    &:hover {
+        transform: rotate(90deg) scale(1.4);
+    }
+}
+
+
+.shading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.28);
+
+    z-index: 10;
+}
+
+.hidden {
+    // hidden elements
+    display: none !important;
+}

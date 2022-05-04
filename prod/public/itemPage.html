@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/itemPage.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<!--  .__class is only used with selector!!!!!!  -->
+<!--  .NSR_ means Noto-Sans-Regular font-family  -->
+
+
+
+<!--
+--------------------------
+--------------- header -->
+
+<div class="container">
+    <header class="row">
+        <div class="header-itself col-12">
+
+            <div class="logo_and_lang-btn">
+                <button class="logo NSR_">
+                    <span>PLAZA</span>.shop
+                </button>
+                <div class="lang-btn NSR_">ENG</div>
+            </div>
+
+            <div class="search-box">
+                <input class="search" type="search" placeholder="Search doesn't work now...">
+                <button></button>
+                <div class="search-tips-wrapper hidden" id="search-tips-wrapper">
+                    <div class="__tip">1000-7</div>
+                    <div class="__tip">????</div>
+                    
+                    <!-- ----- -->
+                </div>
+            </div>
+            <div class="user-btns-container">
+                <button class="header__acc-btn"></button>
+                <button class="goToCompare header__compare-btn">
+                    <div class="goToCompare_indicator ">0</div>
+                </button>
+                <button class="goToCart header__cart-btn">
+                    <div class="goToCart_indicator ">0</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="line-a"></div>
+
+        <div class="under-header col-12">
+            <div class="catalog-wrapper">
+                <button class="catalog-btn"></button>
+                <div class="catalog-inner hidden">
+                    <div class="catalog-inner__top-block NSR_">
+                        Catalog
+                    </div>
+                    <div class="catalog-inner__links-box">
+
+                        <div class="__link-1">
+                            <button class="catalog-linkBtn NSR_"
+                            onclick="showHideCataloged('__link-1')">
+                                hahhahahah
+                                <img class="__after" src="../public/res/ico/Arrow-2.svg" alt="">
+                            </button>
+                            <div class="catalog-linkBtn-inner hidden">
+                                <button class="catalog-link" data-what-to-search="laptop">Laptops</button>
+                                <button class="catalog-link" data-what-to-search="computer">Computers</button>
+                                <button class="catalog-link" data-what-to-search="phone">Smartphones</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <button class="catalog-link" data-what-to-search="laptop">Laptops</button>
+            <button class="catalog-link" data-what-to-search="camera">Cameras</button>
+            <button class="catalog-link" data-what-to-search="phone">Smartphones</button>
+            <button class="catalog-link" data-what-to-search="home appliances">Home appliances</button>
+            <button class="catalog-link" data-what-to-search="monitor">Monitors</button>
+            <button class="catalog-link" data-what-to-search="TV">TVs</button>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </header>
+</div>
+
+
+
+
+<!--
+--------------------------
+-------------- content -->
+<div class="container-fluid" style="width: 96%">
+    <div class="content">
+        <div class="row" style="margin-top: 2.5vw;">
+            <div class="item-img-area-wrapper col-12 col-sm-7 offset-md-1 col-md-6">
+                <div class="item-img-area" id="item-img-area">
+
+
+
+                    <!-- ---------- -->
+                </div>
+            </div>
+
+            <div class="item-buy-area-wrapper col-5 col-md-4" id="item-buy-area-wrapper">
+
+                <!------------------------------->
+            </div>
+
+            <div class="item-info-area-wrapper col-7 col-sm-12">
+                <div class="item-info-area">
+                    <div class="__item-chars-area" id="item-info-area__item-chars-area">
+                    
+                        <!--------->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="row" style="margin-top: 2.7vw; margin-bottom: 2.7vw;">
+            <div class="item-description_and_comments-area col-12">
+                <div class="__btns-area">
+                    <div class="__btn-show-desc __btn_active"><span>Description</span></div>
+                    <div class="__btn-show-com"><span>Comments</span></div>
+                </div>
+                <div class="__description" id="item__description"><!----></div>
+                <div class="__comments hidden"><span>0</span> comments</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<!--
+--------------------------
+------ footer and so on-->
+<footer>
+    <div class="f_a">
+        <a href="#" class="logo NSR_">
+            <span>PLAZA</span>.shop
+        </a>
+        <p>+7-987-654-3210</p>
+        <p>example@mail.com</p>
+        <div class="our-media">
+            <a href="#"><img src="../public/res/ico/tweeter.svg" alt="tweeter"></a>
+            <a href="#"><img src="../public/res/ico/instagram.svg" alt="insta"></a>
+            <a href="#"><img src="../public/res/ico/vk.svg" alt="vk"></a>
+            <a href="#"><img src="../public/res/ico/facebook.svg" alt="facebook"></a>
+        </div>
+    </div>
+
+    <div class="f_b">
+        <span>For Customers</span>
+        <div class="line-ft"></div>
+        <a class="ft_link" href="#">Account</a>
+        <a class="ft_link" href="#">FAQs</a>
+        <a class="ft_link" href="#">Support <br>Center</a>
+    </div>
+    <div class="f_b1">
+        <span>Information</span>
+        <div class="line-ft"></div>
+        <a class="ft_link" href="#">About Us</a>
+        <a class="ft_link" href="#">Privacy Policy</a>
+        <a class="ft_link" href="#">Terms & <br>Conditions</a>
+    </div>
+
+    <div class="f_c"></div>
+
+    <div class="copyright">
+        2022©PLAZA.shop all rights reserved
+    </div>
+</footer>
+
+
+<!-- all this btns and div which r absolute from body (mb some ad in future))-->
+<div class="side-btns-container">
+    <div class="chat-btn"></div>
+    <div class="go-to-top"></div>
+</div>
+
+
+<div class="shading"></div>
+
+
+
+
+<!-- download React js -->
+<!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+<!-- All ur js files -->
+<script src="js/JSONdata.js"></script>
+<script src="../public/js/catalog.js"></script>
+<script src="../public/js/commonScripts.js"></script>
+<script src="../public/js/search.js"></script>
+
+<script src="js/render_itemPage.js"></script>
+<script src="js/itemPage.js"></script>
+
+<!-- connect links -->
+<script src="js/links.js"></script>
+
+</body>
+</html>

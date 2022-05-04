@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plaza.shop</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/mainPage.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+<!--  .__class is only used with selector!!!!!!  -->
+<!--  .NSR_ means Noto-Sans-Regular font-family  -->
+
+
+
+
+
+<!--
+--------------------------
+--------------- header -->
+@@include("htmlParts/header.html")
+
+
+
+
+<!--
+--------------------------
+-------------- content -->
+
+<div class="container">
+    <div class="content row">
+        <div class="moto_and_info-board col-12">
+            <div class="moto">
+                <p>Installments at <span>0%</span></p>
+                <p>first entry <span>0$</span></p>
+                <p><span>6/12/24</span></p>
+            </div>
+            <div class="info-board">
+                <img src="img/moto-pic.svg" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="slider-wrapper" style="position: relative">
+            <div class="items-slider col-12" id="slider-1">
+                <div class="slider-inner" id="slider-inner-1">
+
+                    <!-- -------7------- -->
+                </div>
+            </div>
+            <div class="slider-btn" id="_btn-1_1"></div>
+            <div class="slider-btn" id="_btn-1_2"></div>
+        </div>
+        <div class="dots">
+            <div onclick="Slider1Dots(0)" class="dot" id="dot-1_1"></div>
+            <div onclick="Slider1Dots(-25)" class="dot" id="dot-1_2"></div>
+            <div onclick="Slider1Dots(-50)" class="dot" id="dot-1_3"></div>
+            <div onclick="Slider1Dots(-75)" class="dot" id="dot-1_4"></div>
+        </div>
+
+
+        <div class="line-a"></div>
+        <a class="h1-link NSR_">Black friday!</a>
+
+        <div class="slider-wrapper" style="position: relative">
+            <div class="items-slider col-12" id="slider-2">
+                <div class="slider-inner" id="slider-inner-2">
+
+                    <!-- -------6------- -->
+                </div>
+            </div>
+            <div class="slider-btn" id="_btn-2_1"></div>
+            <div class="slider-btn" id="_btn-2_2"></div>
+        </div>
+        <div class="dots">
+            <div onclick="Slider2Dots(0)" class="dot" id="dot-2_1"></div>
+            <div onclick="Slider2Dots(-33.33)" class="dot" id="dot-2_2"></div>
+            <div onclick="Slider2Dots(-66.66)" class="dot" id="dot-2_3"></div>
+            <div onclick="Slider2Dots(-99.99)" class="dot" id="dot-2_4"></div>
+        </div>
+
+
+
+
+        <div class="line-a"></div>
+        <a class="h1-link NSR_">New product arrivals</a>
+
+        <div class="new-product np-a">
+            <div class="np_image-wrapper">
+                <img src="img/np-placeholder-2.svg" alt="">
+            </div>
+            <div class="np_info-wrapper">
+                <a href="" class="np_link">Lenovo Yoga Slim 234</a>
+                <span class="line-np"></span>
+                <div class="np_text-wrapper">
+                    Признаю, это не лучшее, что я мог сделать в фотошопе, но всеже)
+                    <br/><br/>
+                    Легкий и практичный ноутбук ACER Aspire 3 A315-23-R91S понравится всем без исключения, а мощный процессор AMD Ryzen 5 3500U обеспечит вам высокую производительность.
+                </div>
+                <div class="np_prise">140 000 руб</div>
+            </div>
+        </div>
+
+        <div class="new-product np-b">
+            <div class="np_image-wrapper">
+                <img src="img/np-placeholder-2.svg" alt="">
+            </div>
+            <div class="np_info-wrapper">
+                <a href="" class="np_link">Lenovo Yoga Slim 234</a>
+                <span class="line-np"></span>
+                <div class="np_text-wrapper">
+                    Признаю, это не лучшее, что я мог сделать в фотошопе, но всеже)
+                    <br/><br/>
+                    Этот ультратонкий ноутбук сочетает совершенное качество отделки, ультратонкую конструкцию и захватывающие возможности развлечений. Ноутбуки Yoga серии S задают стандарты для ультратонких ноутбуков.
+                </div>
+                <div class="np_prise">140 000 руб</div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="slider-wrapper col-12" style="position: relative">
+            <div class="items-slider col-12" id="slider-3">
+                <div class="slider-inner" id="slider-inner-3">
+
+                    <!-- -------12------- -->
+                </div>
+            </div>
+            <div class="slider-btn" id="_btn-3_1"></div>
+            <div class="slider-btn" id="_btn-3_2"></div>
+        </div>
+        <div class="dots">
+            <div onclick="Slider3Dots(0)" class="dot" id="dot-3_1"></div>
+            <div onclick="Slider3Dots(-33.33)" class="dot" id="dot-3_2"></div>
+            <div onclick="Slider3Dots(-66.66)" class="dot" id="dot-3_3"></div>
+            <div onclick="Slider3Dots(-99.99)" class="dot" id="dot-3_4"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--
+--------------------------
+------ footer and so on-->
+@@include("htmlParts/footer_and_add-stuff.html")
+
+
+<script src="js/sliders.js"></script>
+
+
+<!-- download React js -->
+<!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+
+<script src="js/render_mainPage.js"></script>
+
+@@include("htmlParts/links.html")
+
+</body>
+</html>

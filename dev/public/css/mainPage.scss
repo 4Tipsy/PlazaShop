@@ -1,0 +1,613 @@
+/* it's a stylesheet of 1st(main/index) page of PLAZA.shop */
+
+$main-color: rgba(223, 22, 191, 1.00); //don't forget to change this in other files!!!
+$not-that-black: #202020;
+
+
+// isn't it obvious what's this for?
+@mixin textCutting($lines) {
+  /* multi-line text cutting */
+
+  -webkit-line-clamp: $lines; // Число отображаемых строк
+  display: -webkit-box; // Включаем флексбоксы
+  -webkit-box-orient: vertical; // Вертикальная ориентация
+  overflow: hidden;
+}
+
+
+
+
+/* making the whole site adaptive! */
+@media (max-width: 760px) {
+  .dots {
+    margin-top: 10px;
+  }
+}
+
+/* (768px is a break-point where everything breaks) */
+@media (max-width: 580px) {
+  .col-12, .line-a {
+    width: calc(100% - 24px) !important;
+  }
+
+
+  // fine... u need this cuz btn's do not fit into screen at 580px-break-point =/
+  #_btn-1_1 {
+    left: 0.6% !important;
+  }
+  #_btn-1_2 {
+    right: calc(0.6% + 24px) !important;
+ }
+  #_btn-2_1, #_btn-3_1 {
+    left: 0.8% !important;
+  }
+  #_btn-2_2, #_btn-3_2 {
+    right: calc(0.8% + 24px) !important;
+  }
+}
+
+
+
+.line-b {
+
+  height: 1px;
+  background-color: black;
+
+  width: 80%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+
+// content -----------------------------------------------
+.h1-link {
+  font-size: max(24px, 2.2vw);
+  cursor: pointer;
+
+  margin: 1%;
+  &:first-of-type {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: $main-color;
+  }
+}
+
+
+.moto_and_info-board {
+  margin-top: 1.4%;
+  margin-right: 8px;
+  margin-left: 8px;
+
+  width: calc(100% - 1% - 8px);
+
+  display: grid;
+  grid-template-columns: 5.5fr 7.5fr;
+}
+.moto {
+  font-size: min(3.3vw, 50px);
+  text-align: right;
+  p {
+    padding-right: 7%; //deco fix
+  }
+  span {
+    color: $main-color;
+  }
+}
+.info-board {
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+// mini item block
+.mini-item-block {
+  white-space: nowrap; //cutting single-line text
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin-left: calc(1% / 1.75);
+  margin-right: calc(1% / 1.75);
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  width: calc((25% / 1.75) - 2*(1% / 1.75));
+  aspect-ratio: 1 / 1;
+
+  background: #FFFFFF;
+  box-shadow: (0px 0px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+
+  .add-to-cart {
+    background-size: cover;
+
+    position: absolute;
+    right: 4%;
+    top: 2.75%;
+
+    aspect-ratio: 1 / 1;
+    width: 9%;
+  }
+  .add-to-compare {
+    background-size: cover;
+
+    position: absolute;
+    right: 4%;
+    top: 14.51%;
+
+    aspect-ratio: 1 / 1;
+    width: 9%;
+  }
+  .__image-wrapper {
+    height: 75%;
+    min-width: 75%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .__image-wrapper__image-itself {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      height: 80%;
+      width: 80%;
+    }
+  }
+  .__name-wrapper {
+    width: 80%;
+    text-align: center;
+
+    overflow: hidden;
+
+    height: 25%;
+    font-size: min(1.6vw, 24px);
+  }
+  .__prise-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: baseline;
+
+    min-width: 80%;
+  }
+  .__prise {
+    font-size: min(1.6vw, 24px);
+    color: $main-color;
+
+  }
+  .__prise_old {
+    font-size: min(1.3vw, 20px);
+    color: $main-color;
+
+    padding-right: 3%;
+
+    text-decoration: line-through;
+  }
+  .__discount {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .__discount__percent {
+    margin-top: 1vw;
+
+    font-size: calc( min(3.35vw, 40px)/1.2 );
+    color: gold;
+  }
+}
+
+// item block customization
+.item-block {
+  margin-left: calc(1% / 2);
+  margin-right: calc(1% / 2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  width: calc((33.33% / 2) - 2*(1% / 2));
+  aspect-ratio: 8 / 10;
+
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+
+  .add-to-cart {
+    background-size: cover;
+
+    position: absolute;
+    right: 4.8%;
+    top: 2.75%;
+
+    aspect-ratio: 1 / 1;
+    width: 7.5%;
+  }
+  .add-to-compare {
+    background-size: cover;
+
+    position: absolute;
+    right: 16%;
+    top: 2.75%;
+
+    aspect-ratio: 1 / 1;
+    width: 7.5%;
+  }
+
+  .__image-wrapper {
+    height: 70%;
+    min-width: 70%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .__image-wrapper__image-itself {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      height: 80%;
+      width: 80%;
+    }
+  }
+  .line-b {
+    margin-bottom: 0.5%;
+  }
+  .__name-wrapper {
+    height: 7%;
+
+    font-size: min(2.0vw, 30px);
+    overflow: hidden;
+
+    width: 80%;
+    text-align: center;
+  }
+
+
+  .__info-wrapper {
+    overflow: auto;
+    height: 10%; // unfortunately its required cuz u need to deal with "cutting" string(by overflow: hidden)
+
+    font-size: min(1.2vw, 20px);
+
+    width: 80%;
+    text-align: center;
+  }
+  .__prise-wrapper {
+    position: absolute;
+    right: 3.92%;
+    bottom: 2.5%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+
+    width: 90%;
+  }
+
+  .__prise {
+    font-size: min(1.7vw, 28px);
+    color: $main-color;
+
+
+  }
+  .__prise_old {
+    font-size: min(1.3vw, 20px);
+    color: $main-color;
+
+    padding-right: 3%;
+
+    text-decoration: line-through;
+  }
+  .__discount {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .__discount__percent {
+    margin-top: 1vw;
+
+    font-size: min(3.35vw, 40px);
+    color: gold;
+  }
+}
+
+// sliders
+.items-slider {
+  overflow: hidden;
+
+  position: relative;
+
+}
+.slider-inner {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%); //idk how but this puts it in center
+
+  display: flex;
+
+
+  transition: all ease 0.5s;
+}
+
+
+// slider additional stuff :P
+.dots {
+  display: flex;
+  justify-content: center;
+}
+.dot {
+  background-color: black;
+  border-radius: 50%;
+
+  width: max(10px, min(15px, 1.5vw));
+  aspect-ratio: 1 / 1;
+
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+
+  cursor: pointer;
+  &:first-child {
+    background-color: $main-color;
+  }
+}
+.slider-btn {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  transition-duration: 0.2s;
+
+  border-radius: 50%;
+  background-color: $main-color;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+
+  opacity: 35%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40%;
+  &:hover {
+    opacity: 60%;
+
+    transform: scale(1.5);
+
+  }
+}
+#_btn-1_1 {
+  left: -1%;
+  background-image: url("../res/ico/Arrow-1.svg");
+
+  height: 20%;
+}
+#_btn-1_2 {
+  right: -1%;
+  background-image: url("../res/ico/Arrow-1-180.svg");
+
+  height: 20%;
+}
+#_btn-2_1 {
+  left: -1.5%;
+  background-image: url("../res/ico/Arrow-1.svg");
+
+  height: 15%;
+}
+#_btn-2_2 {
+  right: -1.5%;
+  background-image: url("../res/ico/Arrow-1-180.svg");
+
+  height: 15%;
+}
+#_btn-3_1 {
+  left: -1.5%;
+  background-image: url("../res/ico/Arrow-1.svg");
+
+  height: 7%;
+}
+#_btn-3_2 {
+  right: -1.5%;
+  background-image: url("../res/ico/Arrow-1-180.svg");
+
+  height: 7%;
+}
+
+
+
+#slider-1 {
+  aspect-ratio: 1110 / 290;
+
+}
+#slider-inner-1 {
+  left: 0;
+
+  width: 175%;
+}
+#slider-2 {
+  aspect-ratio: 1110 / 465;
+
+}
+#slider-inner-2 {
+  left: 0;
+
+  width: 200%;
+}
+#slider-3 {
+  aspect-ratio: 1110 / calc(465*2 + 10);
+}
+#slider-inner-3 {
+  left: 0;
+
+  width: 200%;
+
+  flex-wrap: wrap;
+
+  .item-block {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+  }
+}
+
+
+// new products arrival customization
+.new-product {
+
+  padding-bottom: 3%; //deco? 0_o
+
+  width: calc(100% - 8px - 1%);
+
+  display: flex;
+  margin: 8px;
+}
+.line-np {
+  height: 1px;
+  background-color: $not-that-black;
+
+  width: 100%;
+  margin-top: 1%;
+}
+
+.np-a {
+
+  .np_image-wrapper {
+    width: (66.66% - 2.7%);
+    margin-right: 2.7%;
+  }
+}
+
+.np-b {
+  flex-direction: row-reverse;
+  text-align: right;
+
+  .np_image-wrapper {
+    width: (66.66% - 2.7%);
+    margin-left: 2.7%;
+  }
+}
+
+.np_info-wrapper {
+  width: 33.33%;
+}
+@media (max-width: 768px) {
+  .new-product {
+    div {
+      width: calc(100% - 16px) !important;
+
+      text-align: center;
+    }
+  }
+  .np-a .np_image-wrapper {
+    margin-right: 0 !important;
+  }
+  .np-b .np_image-wrapper {
+    margin-left: 0 !important;
+  }
+  .np-a {
+    flex-direction: column;
+  }
+  .np-b {
+    flex-direction: column;
+  }
+
+  .np_link, .np_text-wrapper, .np_prise {
+    margin-top: 1% !important;
+  }
+  .np_text-wrapper {
+    font-size: 2.5vw !important;
+  }
+}
+
+
+.np_image-wrapper {
+  img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 20px;
+  }
+}
+.np_info-wrapper {
+  display: grid;
+  grid-template-rows: max-content 1px 1fr max-content;
+}
+
+
+.np_link {
+  text-align: center;
+
+  cursor: pointer;
+  color: $main-color;
+  font-size: min(3vw, 48px);
+
+  margin-top: 2%; //deco fix
+}
+
+.np_text-wrapper {
+  font-size: min(2vw, 22px);
+
+  margin-top: 5%; //deco fix
+}
+
+.np_prise {
+  font-size: min(3vw, 48px);
+  color: $main-color;
+
+  margin-bottom: 5%; //deco fix
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

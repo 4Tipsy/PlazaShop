@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/itemPage.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<!--  .__class is only used with selector!!!!!!  -->
+<!--  .NSR_ means Noto-Sans-Regular font-family  -->
+
+
+
+<!--
+--------------------------
+--------------- header -->
+@@include("htmlParts/header.html")
+
+
+<!--
+--------------------------
+-------------- content -->
+<div class="container-fluid" style="width: 96%">
+    <div class="content">
+        <div class="row" style="margin-top: 2.5vw;">
+            <div class="item-img-area-wrapper col-12 col-sm-7 offset-md-1 col-md-6">
+                <div class="item-img-area" id="item-img-area">
+
+
+
+                    <!-- ---------- -->
+                </div>
+            </div>
+
+            <div class="item-buy-area-wrapper col-5 col-md-4" id="item-buy-area-wrapper">
+
+                <!------------------------------->
+            </div>
+
+            <div class="item-info-area-wrapper col-7 col-sm-12">
+                <div class="item-info-area">
+                    <div class="__item-chars-area" id="item-info-area__item-chars-area">
+                    
+                        <!--------->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="row" style="margin-top: 2.7vw; margin-bottom: 2.7vw;">
+            <div class="item-description_and_comments-area col-12">
+                <div class="__btns-area">
+                    <div class="__btn-show-desc __btn_active"><span>Description</span></div>
+                    <div class="__btn-show-com"><span>Comments</span></div>
+                </div>
+                <div class="__description" id="item__description"><!----></div>
+                <div class="__comments hidden"><span>0</span> comments</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<!--
+--------------------------
+------ footer and so on-->
+@@include("htmlParts/footer_and_add-stuff.html")
+<script src="js/render_itemPage.js"></script>
+<script src="js/itemPage.js"></script>
+
+@@include("htmlParts/links.html")
+
+</body>
+</html>

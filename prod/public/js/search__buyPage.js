@@ -1,0 +1,1 @@
+function search__buyPage(a,b){let c=[];return a.forEach(a=>{checkOneItem(a,b)&&c.push(a)}),c}function checkOneItem(a,b){let c=Object.entries(b).map(b=>{let c=!1,d=b[0],e=b[1],f=a.itemChars;try{let a=f[d];Array.isArray(a)?e.forEach(b=>{-1!=a.indexOf(b)&&(c=!0)}):("string"==typeof a||"number"==typeof a)&&e.forEach(b=>{b==a&&(c=!0)})}catch(a){}return c});return!(-1!=c.indexOf(!1))}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/searchPage.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<!--  .__class is only used with selector!!!!!!  -->
+<!--  .NSR_ means Noto-Sans-Regular font-family  -->
+
+
+
+
+<!--
+--------------------------
+--------------- header -->
+@@include("htmlParts/header.html")
+
+
+
+
+<!--
+--------------------------
+-------------- content -->
+<div class="container-fluid" style="width: 96%">
+  <!- idk why but if it's 100% site become bigger than screen /// deco fix also ->
+
+  <div class="row content">
+    <div class="choose-properties-container offset-lg-1 col-4 col-lg-3">
+      <div class="choose-properties" id="choose-properties">
+
+        <div class="choose-properties__values-block" onclick="showHideChoosePropsBlock(this)">
+          <div class="__block-name __showHide_target">
+            <div class="__block-name-itself NSR_ __showHide_target">Producers</div>
+            <div class="block-name__after __showHide_target"></div>
+          </div>
+          <div class="__block-options hidden">
+            <div class="__option">
+              <span class="ico-choose"></span>
+              <span class="__option__name">Apple</span>
+            </div>
+            <div class="__option">
+              <span class="ico-choose"></span>
+              <span class="__option__name">Apple</span>
+            </div>
+            <div class="__option">
+              <span class="ico-choose"></span>
+              <span class="__option__name">Apple</span>
+            </div>
+
+            <button class="show-more">Show more</button>
+          </div>
+        </div>
+
+        <div class="choose-properties__price-block">
+
+
+          <div class="prise-slider">
+
+          </div>
+
+
+
+
+        </div>
+        <!-- ------- -->
+      </div>
+    </div>
+    <div class="other-content col-8 col-lg-7">
+      <div class="tips_and_sort">
+        <div class="tips4search">
+          <span>iPhone 12</span>
+          <span>iPhone 11</span>
+          <span>Xiaomi</span>
+          <span>Samsung</span>
+          <span>BQ M-32 lite</span>
+        </div>
+        <div style="display: flex">
+          <div class="__line"></div>
+        </div>
+        <div class="sort-items-container">
+          <p style="margin-bottom: 0; margin-top: 2vw">Sort by
+            <div class="sort-items__btn" onclick="showHideSortBtn()">
+                <span data-mode="byDefault">default</span>
+                <div class="sort-items__btn__inner hidden">
+                    <div class="__sortOption __sortOption_byDefault" style="text-decoration: underline"
+                    onclick="{changeSortMode('default'); markSortBtn(this)}">default </div>
+                    <div class="__sortOption __sortOption_byPrice_chipper"
+                         onclick="{changeSortMode('byPrice_chipper'); markSortBtn(this)}">price /\ </div>
+                    <div class="__sortOption __sortOption_byPrice_moreExpensive"
+                         onclick="{changeSortMode('byPrice_moreExpensive'); markSortBtn(this)}">price \/ </div>
+                </div>
+            <img class="__after" src="../public/res/ico/Arrow-2.svg" alt="">
+            </div>
+          </p>
+        </div>
+      </div>
+      <div class="search-values-texted col-7">
+
+      </div>
+
+
+
+      <div class="items-list col-7" id="items-list">
+
+        <!-- ------ 10 ------ -->
+      </div>
+    </div>
+    <div class="pagination col-12" id="pagination">
+
+        <!-- -->
+    </div>
+
+
+  </div>
+</div>
+
+<!--
+--------------------------
+------ footer and so on-->
+@@include("htmlParts/footer_and_add-stuff.html")
+<script src="js/searchPage.js"></script>
+<script src="js/render_searchPage.js"></script>
+<script src="js/search__buyPage.js"></script>
+
+@@include("htmlParts/links.html")
+
+</body>
+</html>

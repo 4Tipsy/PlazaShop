@@ -1,0 +1,116 @@
+/* it's a stylesheet of item page of PLAZA.shop */
+.item-img-area {
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #fff; }
+  .item-img-area .__chosen-img-wrapper {
+    height: 75%;
+    min-width: 75%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .item-img-area .__chosen-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 80%;
+    width: 80%; }
+  .item-img-area .__discount__percent {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    margin-top: 1vw;
+    font-size: calc( min(3.35vw, 40px)*1.5 );
+    color: gold; }
+  .item-img-area .__img-choose-from {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+  .item-img-area .__img-choose-from__option {
+    aspect-ratio: 1 / 1;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .item-img-area .__img-choose-from__option .__img-itself {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 80%;
+      width: 80%; }
+
+.item-buy-area__line {
+  width: 85%;
+  background-color: black;
+  height: 1px; }
+
+.item-buy-area {
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .item-buy-area > div {
+    width: 80%; }
+  .item-buy-area .__name-itself {
+    height: 16%;
+    font-size: min(2.6vw, 29px);
+    text-align: center;
+    vertical-align: middle; }
+  .item-buy-area .__item-options {
+    height: 60%; }
+  .item-buy-area .__item-options__choose-option {
+    width: 100%; }
+    .item-buy-area .__item-options__choose-option .__option-name {
+      font-size: min(2.8vw, 32px);
+      margin-left: 2vw; }
+    .item-buy-area .__item-options__choose-option .__options-wrapper {
+      display: flex; }
+  .item-buy-area .__buy-btns_and_prise {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 23%;
+    justify-content: center; }
+    .item-buy-area .__buy-btns_and_prise .__btns {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1vw; }
+  .item-buy-area .__add-to-compare, .item-buy-area .__add-to-cart {
+    height: min(3.7vw, 40px);
+    border: 2px solid #df16bf;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s; }
+    .item-buy-area .__add-to-compare:hover, .item-buy-area .__add-to-cart:hover {
+      background-color: #df16bf;
+      color: #fff; }
+  .item-buy-area .__add-to-compare {
+    aspect-ratio: 1 / 1;
+    background-image: url("../res/ico/compare_pink.svg");
+    background-size: 70%;
+    background-position: center center;
+    background-repeat: no-repeat; }
+    .item-buy-area .__add-to-compare:hover {
+      background-image: url("../res/ico/compare_white.svg"); }
+  .item-buy-area .__add-to-cart {
+    aspect-ratio: 3.5 / 1;
+    margin-left: 1vw;
+    color: #df16bf;
+    font-size: min(1.7vw, 19px); }
+  .item-buy-area .__prise, .item-buy-area .__prise-itself {
+    font-size: min(2.6vw, 29px); }
+  .item-buy-area .__prise-itself {
+    color: #df16bf; }
+
+.item-info-area {
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px; }
+
+/*# sourceMappingURL=itemPage.css.map */

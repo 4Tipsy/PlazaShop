@@ -1,0 +1,293 @@
+/* it's a stylesheet of item page of PLAZA.shop */
+
+$main-color: #df16bf; //don't forget to change this in other files!!!
+$not-that-black: #202020;
+
+
+
+.item-img-area {
+  aspect-ratio: 1 / 1;
+  margin-top: 1vw; // deco fix
+
+
+  .__chosen-img-wrapper {
+    height: 75%;
+    min-width: 75%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .__chosen-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    height: 80%;
+    width: 80%;
+  }
+  .__discount__percent {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+
+    margin-top: 1vw;
+
+    font-size: calc( min(3.35vw, 40px)*1.5 );
+    color: gold;
+  }
+
+  .__img-choose-from {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .__img-choose-from__option {
+    aspect-ratio: 1 / 1;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    .__img-itself {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      height: 80%;
+      width: 80%;
+    }
+  }
+}
+
+
+
+.item-buy-area__line {
+  width: 85%;
+  background-color: black;
+  height: 1px;
+}
+.item-buy-area {
+  height: 100%;
+
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    width: 80%;
+  }
+
+  .__item-name-wrapper {
+    min-height: 11%;
+    height: fit-content;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .__item-name {
+    font-size: min(2.6vw, 29px);
+
+    margin: 0.5vw;
+  }
+  .__item-options {
+    height: 60%;
+    flex-grow: 2;
+  }
+  .__item-options__choose-option {
+    width: 100%;
+
+    .__option-name {
+      font-size: min(2.8vw, 32px);
+
+      margin-left: 2vw; // deco fix
+    }
+    .__options-wrapper {
+      display: flex;
+    }
+  }
+
+
+
+
+  .__buy-btns_and_prise {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 23%;
+    height: fit-content;
+    justify-content: center;
+
+    margin-bottom: 0.5vw; // deco fix
+
+    .__btns {
+      display: flex;
+      justify-content: space-around;
+
+      margin-top: 1vw;
+    }
+  }
+  .__add-to-compare, .__add-to-cart {
+    height: min(3.7vw, 40px);
+
+    border: 2px solid $main-color;
+    border-radius: 5px;
+
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+  .__add-to-compare {
+    aspect-ratio: 1 / 1;
+
+    background-image: url("../res/ico/compare_pink.svg");
+    background-size: 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:hover {
+
+      background-image: url("../res/ico/compare_white.svg");
+    }
+  }
+  .__add-to-cart {
+    aspect-ratio: 3.5 / 1;
+
+    margin-left: 1vw;
+
+    color: $main-color;
+    font-size: min(1.7vw, 19px);
+  }
+
+  .__price-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .__price-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 0.5vw; // deco fix
+  }
+
+  .__price, .__price-old {
+    color: $main-color;
+  }
+  .__price {
+    font-size: min(2.6vw, 29px);
+
+  }
+  .__price-old {
+    font-size: calc(min(2.6vw, 29px)/1.65);
+
+    text-decoration: line-through;
+  }
+}
+
+
+
+
+.item-info-area {
+  margin-top: 2.5vw; // deco fix
+  .__item-chars-area {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .__item-char {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    width: 50%;
+    
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+    
+    .__char-line {
+      flex-grow: 2;
+      height: 1px;
+      background-color: black;
+
+      margin: 0.4vw;
+    }
+    div { // не касается .__char-line
+      font-size: min(2.3vw,24px);
+      text-align: center;
+
+      &:first-child {padding-left: 2vw;}
+      &:last-child {padding-right: 2vw;}
+    }
+  }
+}
+
+
+.item-description_and_comments-area {
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  padding-left: 0 !important; // deco fix
+  padding-right: 0 !important; // deco fix
+
+  .__btns-area {
+    width: 100%;    
+    display: flex;
+
+    .__btn-show-desc, .__btn-show-com {
+      width: 24%;
+      aspect-ratio: 5 / 1.1;
+      cursor: pointer;
+
+      font-size: min(2.7vw, 35px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: background 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: #df16bf;
+        color: #fff;
+      }
+    }
+    .__btn-show-desc {
+      border-radius: 15px 0px;
+    }
+    .__btn-show-com {
+      border-radius: 0px 0px 15px 15px;
+    }
+    .__btn_active {
+      background-color: #df16bf;
+      color: #fff;
+    }
+  }
+
+
+  .__description, .__comments {
+    padding: 2.5vw 3.5vw;
+    margin-bottom: 1.2vw; // deco fix
+
+    font-size: calc(min(2.7vw, 35px) / 1.2);
+  }
+  .__comments span {color: $main-color;}
+  .__comments {padding-left: 6vw;}
+}

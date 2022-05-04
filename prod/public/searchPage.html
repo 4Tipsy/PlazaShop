@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/searchPage.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<!--  .__class is only used with selector!!!!!!  -->
+<!--  .NSR_ means Noto-Sans-Regular font-family  -->
+
+
+
+
+<!--
+--------------------------
+--------------- header -->
+
+<div class="container">
+    <header class="row">
+        <div class="header-itself col-12">
+
+            <div class="logo_and_lang-btn">
+                <button class="logo NSR_">
+                    <span>PLAZA</span>.shop
+                </button>
+                <div class="lang-btn NSR_">ENG</div>
+            </div>
+
+            <div class="search-box">
+                <input class="search" type="search" placeholder="Search doesn't work now...">
+                <button></button>
+                <div class="search-tips-wrapper hidden" id="search-tips-wrapper">
+                    <div class="__tip">1000-7</div>
+                    <div class="__tip">????</div>
+                    
+                    <!-- ----- -->
+                </div>
+            </div>
+            <div class="user-btns-container">
+                <button class="header__acc-btn"></button>
+                <button class="goToCompare header__compare-btn">
+                    <div class="goToCompare_indicator ">0</div>
+                </button>
+                <button class="goToCart header__cart-btn">
+                    <div class="goToCart_indicator ">0</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="line-a"></div>
+
+        <div class="under-header col-12">
+            <div class="catalog-wrapper">
+                <button class="catalog-btn"></button>
+                <div class="catalog-inner hidden">
+                    <div class="catalog-inner__top-block NSR_">
+                        Catalog
+                    </div>
+                    <div class="catalog-inner__links-box">
+
+                        <div class="__link-1">
+                            <button class="catalog-linkBtn NSR_"
+                            onclick="showHideCataloged('__link-1')">
+                                hahhahahah
+                                <img class="__after" src="../public/res/ico/Arrow-2.svg" alt="">
+                            </button>
+                            <div class="catalog-linkBtn-inner hidden">
+                                <button class="catalog-link" data-what-to-search="laptop">Laptops</button>
+                                <button class="catalog-link" data-what-to-search="computer">Computers</button>
+                                <button class="catalog-link" data-what-to-search="phone">Smartphones</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <button class="catalog-link" data-what-to-search="laptop">Laptops</button>
+            <button class="catalog-link" data-what-to-search="camera">Cameras</button>
+            <button class="catalog-link" data-what-to-search="phone">Smartphones</button>
+            <button class="catalog-link" data-what-to-search="home appliances">Home appliances</button>
+            <button class="catalog-link" data-what-to-search="monitor">Monitors</button>
+            <button class="catalog-link" data-what-to-search="TV">TVs</button>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </header>
+</div>
+
+
+
+
+
+
+<!--
+--------------------------
+-------------- content -->
+<div class="container-fluid" style="width: 96%">
+  <!- idk why but if it's 100% site become bigger than screen /// deco fix also ->
+
+  <div class="row content">
+    <div class="choose-properties-container offset-lg-1 col-4 col-lg-3">
+      <div class="choose-properties" id="choose-properties">
+
+        <div class="choose-properties__values-block" onclick="showHideChoosePropsBlock(this)">
+          <div class="__block-name __showHide_target">
+            <div class="__block-name-itself NSR_ __showHide_target">Producers</div>
+            <div class="block-name__after __showHide_target"></div>
+          </div>
+          <div class="__block-options hidden">
+            <div class="__option">
+              <span class="ico-choose"></span>
+              <span class="__option__name">Apple</span>
+            </div>
+            <div class="__option">
+              <span class="ico-choose"></span>
+              <span class="__option__name">Apple</span>
+            </div>
+            <div class="__option">
+              <span class="ico-choose"></span>
+              <span class="__option__name">Apple</span>
+            </div>
+
+            <button class="show-more">Show more</button>
+          </div>
+        </div>
+
+        <div class="choose-properties__price-block">
+
+
+          <div class="prise-slider">
+
+          </div>
+
+
+
+
+        </div>
+        <!-- ------- -->
+      </div>
+    </div>
+    <div class="other-content col-8 col-lg-7">
+      <div class="tips_and_sort">
+        <div class="tips4search">
+          <span>iPhone 12</span>
+          <span>iPhone 11</span>
+          <span>Xiaomi</span>
+          <span>Samsung</span>
+          <span>BQ M-32 lite</span>
+        </div>
+        <div style="display: flex">
+          <div class="__line"></div>
+        </div>
+        <div class="sort-items-container">
+          <p style="margin-bottom: 0; margin-top: 2vw">Sort by
+            <div class="sort-items__btn" onclick="showHideSortBtn()">
+                <span data-mode="byDefault">default</span>
+                <div class="sort-items__btn__inner hidden">
+                    <div class="__sortOption __sortOption_byDefault" style="text-decoration: underline"
+                    onclick="{changeSortMode('default'); markSortBtn(this)}">default </div>
+                    <div class="__sortOption __sortOption_byPrice_chipper"
+                         onclick="{changeSortMode('byPrice_chipper'); markSortBtn(this)}">price /\ </div>
+                    <div class="__sortOption __sortOption_byPrice_moreExpensive"
+                         onclick="{changeSortMode('byPrice_moreExpensive'); markSortBtn(this)}">price \/ </div>
+                </div>
+            <img class="__after" src="../public/res/ico/Arrow-2.svg" alt="">
+            </div>
+          </p>
+        </div>
+      </div>
+      <div class="search-values-texted col-7">
+
+      </div>
+
+
+
+      <div class="items-list col-7" id="items-list">
+
+        <!-- ------ 10 ------ -->
+      </div>
+    </div>
+    <div class="pagination col-12" id="pagination">
+
+        <!-- -->
+    </div>
+
+
+  </div>
+</div>
+
+<!--
+--------------------------
+------ footer and so on-->
+<footer>
+    <div class="f_a">
+        <a href="#" class="logo NSR_">
+            <span>PLAZA</span>.shop
+        </a>
+        <p>+7-987-654-3210</p>
+        <p>example@mail.com</p>
+        <div class="our-media">
+            <a href="#"><img src="../public/res/ico/tweeter.svg" alt="tweeter"></a>
+            <a href="#"><img src="../public/res/ico/instagram.svg" alt="insta"></a>
+            <a href="#"><img src="../public/res/ico/vk.svg" alt="vk"></a>
+            <a href="#"><img src="../public/res/ico/facebook.svg" alt="facebook"></a>
+        </div>
+    </div>
+
+    <div class="f_b">
+        <span>For Customers</span>
+        <div class="line-ft"></div>
+        <a class="ft_link" href="#">Account</a>
+        <a class="ft_link" href="#">FAQs</a>
+        <a class="ft_link" href="#">Support <br>Center</a>
+    </div>
+    <div class="f_b1">
+        <span>Information</span>
+        <div class="line-ft"></div>
+        <a class="ft_link" href="#">About Us</a>
+        <a class="ft_link" href="#">Privacy Policy</a>
+        <a class="ft_link" href="#">Terms & <br>Conditions</a>
+    </div>
+
+    <div class="f_c"></div>
+
+    <div class="copyright">
+        2022©PLAZA.shop all rights reserved
+    </div>
+</footer>
+
+
+<!-- all this btns and div which r absolute from body (mb some ad in future))-->
+<div class="side-btns-container">
+    <div class="chat-btn"></div>
+    <div class="go-to-top"></div>
+</div>
+
+
+<div class="shading"></div>
+
+
+
+
+<!-- download React js -->
+<!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+<!-- All ur js files -->
+<script src="js/JSONdata.js"></script>
+<script src="../public/js/catalog.js"></script>
+<script src="../public/js/commonScripts.js"></script>
+<script src="../public/js/search.js"></script>
+
+<script src="js/searchPage.js"></script>
+<script src="js/render_searchPage.js"></script>
+<script src="js/search__buyPage.js"></script>
+
+<!-- connect links -->
+<script src="js/links.js"></script>
+
+</body>
+</html>
