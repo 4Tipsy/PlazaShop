@@ -234,8 +234,8 @@ $not-that-black: #202020;
       font-size: min(2.1vw, 26px);
       text-align: center;
 
-      &:first-child {padding-left: 2vw;}
-      &:last-child {padding-right: 2vw;}
+      &:first-child {padding-left: 3vw;}
+      &:last-child {padding-right: 3vw;}
     }
   }
 }
@@ -287,7 +287,7 @@ $not-that-black: #202020;
     padding: 2.5vw 3.5vw;
     margin-bottom: 1.2vw; // deco fix
 
-    font-size: calc(min(2.7vw, 35px) / 1.2);
+    font-size: calc(min(2.7vw, 35px) / 1.5);
   }
   .__comments span {color: $main-color;}
   .__comments {padding-left: 6vw;}

@@ -2,7 +2,7 @@
 // конструктор ссылки)
 let currentUrl = new URL(window.location.href)
 //var currentUrlBase = currentUrl.origin
-var currentUrlBase = new URL("/prod/public", currentUrl.origin) // ONLY 4 DEV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+var currentUrlBase = new URL("/PlazaShop/prod/public", currentUrl.origin) // ONLY BY HANDS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // лого
 document.querySelectorAll(".logo").forEach(
