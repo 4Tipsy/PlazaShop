@@ -17,15 +17,22 @@ function getItem_fromGetParams(array) {
 
 function ItemImgAreaInner(props) {
 
-    function changeChosenImg(imgUrl) {
+    function changeChosenImg(e, imgUrl) {
         let chosenImg = document.querySelector(".__chosen-img")
         chosenImg.style.backgroundImage = "url(" + imgUrl + ")"
+
+        document.querySelectorAll(".__img-choose-from__option").forEach(
+            (el) => {el.style = ""}
+        )
+
+
+        e.currentTarget.style.border = `solid 1px ${mainColor}`
     }
 
     
     function Option_imgToChoose(props, index) {
         return(
-            <div className="__img-choose-from__option" key={index} onClick={()=>{changeChosenImg(props)}}>
+            <div className="__img-choose-from__option" key={index} onClick={(e)=>{changeChosenImg(e, props)}}>
                 <div className="__img-itself" style={{backgroundImage: "url("+props+")"}}/>
             </div>
         )
@@ -54,13 +61,26 @@ ReactDOM.render(
     ItemImgAreaInner(itemToRender),
     itemImgArea
 )
+document.querySelector(".__img-choose-from__option").style.border = `solid 1px ${mainColor}` // костыль
 
 
 
 
 
 function ItemBuyAreaInner(props) {
+    function addTo_cart_or_compare(event, itemId) {
+        // изменяем массив с корзиной
+        if (event.target.classList.contains("__add-to-cart")) {
+            IDs_in_cart.push(itemId)
+            localStorage.setItem("PlazaShop__IDs_in_cart", JSON.stringify(IDs_in_cart))
+        }
+        else if (event.target.classList.contains("__add-to-compare")) {
+            IDs_in_compare.push(itemId)
+            localStorage.setItem("PlazaShop__IDs_in_compare", JSON.stringify(IDs_in_compare))
+        }
 
+        refresh_cart_and_compare_indicators()
+    }
     return (
             
 
@@ -77,7 +97,7 @@ function ItemBuyAreaInner(props) {
                     
                     
                     
-                    <p style={{"margin-top": "10vw"}}>not now ;)</p>
+                    <p style={{"marginTop": "10vw"}}>not now ;)</p>
 
 
 
@@ -96,7 +116,7 @@ function ItemBuyAreaInner(props) {
                         <div className="__price">{prettifyPrice(props.itemPrice)}</div>
                     </div>
                 </div>
-                <div className="__btns">
+                <div className="__btns" onClick={(event)=>{addTo_cart_or_compare(event, props.itemId)}}>
                     <button className="__add-to-cart NSR_">Add to cart</button>
                     <button className="__add-to-compare"></button>
                 </div>

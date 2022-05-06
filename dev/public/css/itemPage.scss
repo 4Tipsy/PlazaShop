@@ -54,6 +54,7 @@ $not-that-black: #202020;
     align-items: center;
 
     cursor: pointer;
+    border-radius: 10px;
 
     .__img-itself {
       background-size: contain;
@@ -230,7 +231,7 @@ $not-that-black: #202020;
       margin: 0.4vw;
     }
     div { // не касается .__char-line
-      font-size: min(2.3vw,24px);
+      font-size: min(2.1vw, 26px);
       text-align: center;
 
       &:first-child {padding-left: 2vw;}

@@ -208,7 +208,7 @@ $blue-one: #5D5FEF;
 
 
   width: 100%;
-  min-height: 16.5vw;
+  height: 16.5vw;
 
   background: #fff;
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.25);
@@ -218,6 +218,7 @@ $blue-one: #5D5FEF;
   grid-template-areas: "__img-wrapper __text __discount"
                         "__img-wrapper __btns_and_prise __btns_and_prise";
   grid-template-columns: 2.7fr 5.25fr 2.05fr;
+  grid-template-rows: 2fr 1fr;
 
 
   .__img-wrapper {
@@ -244,8 +245,12 @@ $blue-one: #5D5FEF;
     grid-area: __text;
 
     margin-top: 5%;
+    padding-bottom: 5%;
 
     font-size: min(1.9vw, 22px);
+
+    overflow: hidden;
+
   }
   .__discount {
     grid-area: __discount;

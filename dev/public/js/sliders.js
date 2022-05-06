@@ -1,4 +1,4 @@
-
+/* этот пздц тоже надо переделать */
 const Slider1 = document.getElementById('slider-inner-1');
 const Slider2 = document.getElementById('slider-inner-2');
 const Slider3 = document.getElementById('slider-inner-3');

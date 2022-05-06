@@ -15,14 +15,19 @@ document.querySelectorAll(".logo").forEach(
 document.querySelectorAll(".catalog-link").forEach(
     (link) => {
         let searchType = link.getAttribute("data-what-to-search")
-        link.onclick = () => {window.location.href = currentUrlBase + "/searchPage.html" + `?searchByCatalog=${searchType}`}
+
+        if (searchType == "allItems") {
+            link.onclick = () => {window.location.href = currentUrlBase + "/searchPage.html"}
+        } else {
+            link.onclick = () => {window.location.href = currentUrlBase + "/searchPage.html" + `?searchByCatalog=${searchType}`}
+        }
     }
 )
 
 // для поиска онклики прописаны в search.js
 
 // сами товары (перенаправление в itemPage)
-document.querySelectorAll(".mini-item-block, .item-block").forEach(
+document.querySelectorAll(".mini-item-block, .item-block, .cart__item-block").forEach(
     (el) => {
         el.onclick = function () {
             let itemId = event.currentTarget.getAttribute("data-item-id")

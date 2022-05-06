@@ -24,15 +24,15 @@ function CartItem(props, key) {
     }
     return (
         <div className="cart__item-block" data-item-id={props.itemId} key={key} onClick={clone_or_remove_item}>
-            <div className="__img-wrapper">
+            <div className="__img-wrapper goToItem">
                 {(props.onDiscount == 1) &&
                     <div className="__discount__indicator">%!</div>
                 }
-                <div className="__img-wrapper__img-itself"
+                <div className="__img-wrapper__img-itself goToItem"
                      style={{backgroundImage: "url("+props.itemImg+")"}}>
                 </div>
             </div>
-            <div className="__text NSR_">
+            <div className="__text NSR_ goToItem">
                 {props.itemName + " -- " + props.itemInfo}
             </div>
             <div className="__btns">
