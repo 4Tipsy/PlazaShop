@@ -357,6 +357,21 @@ body {
 
 
 // footer
+
+// attach footer to the bottom of the site 
+body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+.content-wrapper {
+    flex-grow: 1;
+}
+
+
+
+
 .line-ft {
     height: 1px;
     width: 65%;
@@ -364,11 +379,7 @@ body {
 }
 
 footer {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-
+    margin: 0 -8px -8px -8px; // deco fix
 
 
     background-color: $not-that-black;
