@@ -47,7 +47,7 @@ gulp.task("buildCss",
       .pipe(gulp.dest("prod/public/css"))
 })
 
-// собирает jsx файлы
+// собирает и минимизирует jsx файлы
 gulp.task("buildJsx", function () {
   return gulp.src("dev/public/js/*.jsx")
     .pipe(babel({
