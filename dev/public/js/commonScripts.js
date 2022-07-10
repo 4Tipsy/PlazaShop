@@ -85,6 +85,8 @@ document.querySelector(".chat-btn").onclick = function () {
 
 
 
+console.log("Everything here is clickable, just try it!")
+
 // ;)
 async function zxc () { 
     let i = 1000
