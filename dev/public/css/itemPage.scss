@@ -254,8 +254,8 @@ $not-that-black: #202020;
     display: flex;
 
     .__btn-show-desc, .__btn-show-com {
-      width: 24%;
-      max-width: 240px;
+      width: min(24%, 240px);
+
 
       aspect-ratio: 5 / 1.1;
       cursor: pointer;
