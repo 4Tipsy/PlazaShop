@@ -1,4 +1,9 @@
-
+document.querySelectorAll(".tips4search > span").forEach( (el) => {
+    el.onclick = () => {
+        value = el.innerText
+        window.location.href = currentUrlBase + "/searchPage.html" + `?search=${value}`
+    }
+})
 
 
 function showHideSortBtn() {

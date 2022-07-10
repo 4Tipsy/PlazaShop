@@ -24,7 +24,22 @@ document.querySelectorAll(".catalog-link").forEach(
     }
 )
 
-// для поиска онклики прописаны в search.js
+// поиск товаров
+document.querySelector(".search-btn").onclick = () => goSearch()
+document.querySelector(".search").onkeyup = (event) => {
+    if (event.code == "Enter") {
+        goSearch()
+    }
+}
+function goSearch () {
+    let value = document.querySelector(".search").value
+    if (value.length == 0) {
+        alert("Search value is empty")
+    } else {
+        window.location.href = currentUrlBase + "/searchPage.html" + `?search=${value}`
+    }
+}
+
 
 // сами товары (перенаправление в itemPage)
 document.querySelectorAll(".mini-item-block, .item-block, .cart__item-block").forEach(

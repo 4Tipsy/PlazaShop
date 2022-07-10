@@ -280,7 +280,7 @@ function render_searchPage() {
             let newElems = subarrays[pageToRender - 1].map( (el) => {return (
                 ItemBlock_long(el)
             )})
-
+            
             // рендер
             ReactDOM.render(
                 newElems,

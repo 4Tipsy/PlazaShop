@@ -73,9 +73,26 @@ window.onload = setTimeout(
     function() {
         document.querySelector(".shading").classList.add("hidden")
     }
-    ,650);
+    ,450);
 
 
 document.querySelector(".go-to-top").onclick = function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.querySelector(".chat-btn").onclick = function () {
+    alert("Chat is not working, it's just a mere placeholder")
+}
+
+
+
+// ;)
+async function zxc () { 
+    let i = 1000
+    while (i > 0) {
+        console.log(`${i}-7=${i-7}`)
+        i -= 7
+
+        await new Promise(j => setTimeout(j, 120));
+    }
+    console.log("???")
 }

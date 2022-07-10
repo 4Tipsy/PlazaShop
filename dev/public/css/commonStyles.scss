@@ -185,19 +185,7 @@ body {
 
 
 .search-tips-wrapper {
-    display: flex;
-    flex-direction: column;
-
-    padding-left: 0;
-    position: absolute;
-    top: 140%;
-    width: 100%;
-
-    background-color: #fff;
-    border: solid 1px;
-    border-radius: 10px;
-
-    z-index: inherit;
+    
 
     .__tip {
         font-size: min(2.0vw, 16px);
