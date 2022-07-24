@@ -403,6 +403,9 @@ $not-that-black: #202020;
 
   }
 }
+
+// увы но тут приходиться использовать id,
+// т к для каждой кнопки нужно индивидуально задать пару строк стиля
 #_btn-1_1 {
   left: -1%;
   background-image: url("../res/ico/Arrow-1.svg");
@@ -480,7 +483,7 @@ $not-that-black: #202020;
 // new products arrival customization
 .new-product {
 
-  padding-bottom: 3%; //deco? 0_o
+  padding-bottom: 3%; //deco
 
   width: calc(100% - 8px - 1%);
 

@@ -14,6 +14,7 @@
 
 #---------------------
 node_modules/
+.vscode/
 package-log.json
 dev/babel.config.json
 dev/package-lock.json

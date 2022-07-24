@@ -8,90 +8,39 @@ let Slider3_offset = 0;
 
 
 
-function recolorDotsS1(x){
-    switch (x) {
-        case 0:
-            document.querySelector("#dot-1_1").style.backgroundColor = mainColor;
-            document.querySelector("#dot-1_2").style.backgroundColor = "black";
-            document.querySelector("#dot-1_3").style.backgroundColor = "black";
-            document.querySelector("#dot-1_4").style.backgroundColor = "black";
-            break;
-        case -25:
-            document.querySelector("#dot-1_1").style.backgroundColor = "black";
-            document.querySelector("#dot-1_2").style.backgroundColor = mainColor;
-            document.querySelector("#dot-1_3").style.backgroundColor = "black";
-            document.querySelector("#dot-1_4").style.backgroundColor = "black";
-            break;
-        case -50:
-            document.querySelector("#dot-1_1").style.backgroundColor = "black";
-            document.querySelector("#dot-1_2").style.backgroundColor = "black";
-            document.querySelector("#dot-1_3").style.backgroundColor = mainColor;
-            document.querySelector("#dot-1_4").style.backgroundColor = "black";
-            break;
-        case -75:
-            document.querySelector("#dot-1_1").style.backgroundColor = "black";
-            document.querySelector("#dot-1_2").style.backgroundColor = "black";
-            document.querySelector("#dot-1_3").style.backgroundColor = "black";
-            document.querySelector("#dot-1_4").style.backgroundColor = mainColor;
-            break;
+
+function recolorDotsS1(x) {
+  let dots = document.querySelector(".slider-1-dots").querySelectorAll(".dot")
+
+  dots.forEach(
+    (el)=>{
+        el.style.backgroundColor = "black"
     }
-};
-function recolorDotsS2(x){
-    switch (x) {
-        case 0:
-            document.querySelector("#dot-2_1").style.backgroundColor = mainColor;
-            document.querySelector("#dot-2_2").style.backgroundColor = "black";
-            document.querySelector("#dot-2_3").style.backgroundColor = "black";
-            document.querySelector("#dot-2_4").style.backgroundColor = "black";
-            break;
-        case -33.33:
-            document.querySelector("#dot-2_1").style.backgroundColor = "black";
-            document.querySelector("#dot-2_2").style.backgroundColor = mainColor;
-            document.querySelector("#dot-2_3").style.backgroundColor = "black";
-            document.querySelector("#dot-2_4").style.backgroundColor = "black";
-            break;
-        case -66.66:
-            document.querySelector("#dot-2_1").style.backgroundColor = "black";
-            document.querySelector("#dot-2_2").style.backgroundColor = "black";
-            document.querySelector("#dot-2_3").style.backgroundColor = mainColor;
-            document.querySelector("#dot-2_4").style.backgroundColor = "black";
-            break;
-        case -99.99:
-            document.querySelector("#dot-2_1").style.backgroundColor = "black";
-            document.querySelector("#dot-2_2").style.backgroundColor = "black";
-            document.querySelector("#dot-2_3").style.backgroundColor = "black";
-            document.querySelector("#dot-2_4").style.backgroundColor = mainColor;
-            break;
+  )
+  dots[ x/-25 ].style.backgroundColor = mainColor
+}
+function recolorDotsS2(x) {
+  let dots = document.querySelector(".slider-2-dots").querySelectorAll(".dot")
+
+  dots.forEach(
+    (el)=>{
+        el.style.backgroundColor = "black"
     }
-};
-function recolorDotsS3(x){
-    switch (x) {
-        case 0:
-            document.querySelector("#dot-3_1").style.backgroundColor = mainColor;
-            document.querySelector("#dot-3_2").style.backgroundColor = "black";
-            document.querySelector("#dot-3_3").style.backgroundColor = "black";
-            document.querySelector("#dot-3_4").style.backgroundColor = "black";
-            break;
-        case -33.33:
-            document.querySelector("#dot-3_1").style.backgroundColor = "black";
-            document.querySelector("#dot-3_2").style.backgroundColor = mainColor;
-            document.querySelector("#dot-3_3").style.backgroundColor = "black";
-            document.querySelector("#dot-3_4").style.backgroundColor = "black";
-            break;
-        case -66.66:
-            document.querySelector("#dot-3_1").style.backgroundColor = "black";
-            document.querySelector("#dot-3_2").style.backgroundColor = "black";
-            document.querySelector("#dot-3_3").style.backgroundColor = mainColor;
-            document.querySelector("#dot-3_4").style.backgroundColor = "black";
-            break;
-        case -99.99:
-            document.querySelector("#dot-3_1").style.backgroundColor = "black";
-            document.querySelector("#dot-3_2").style.backgroundColor = "black";
-            document.querySelector("#dot-3_3").style.backgroundColor = "black";
-            document.querySelector("#dot-3_4").style.backgroundColor = mainColor;
-            break;
+  )
+  dots[ x/-33.33 ].style.backgroundColor = mainColor
+}
+function recolorDotsS3(x) {
+  let dots = document.querySelector(".slider-3-dots").querySelectorAll(".dot")
+
+  dots.forEach(
+    (el)=>{
+        el.style.backgroundColor = "black"
     }
-};
+  )
+  dots[ x/-33.33 ].style.backgroundColor = mainColor
+}
+
+
 
 
 function Slider1Dots(x) {
